@@ -6,7 +6,7 @@ import sys
 NUM_ROWS = 50
 
 # Тематика: животные в зоопарке
-COLUMNS = ["animal", "weight_kg", "age", "enclosure"]
+COLUMNS = ["animal", "weight_kg", "age", "zone"]
 
 def generate_row():
     animals = ["Лев", "Тигр", "Медведь", "Зебра", "Жираф", "Обезьяна", "Пингвин", "Слон"]
@@ -15,7 +15,7 @@ def generate_row():
         "animal": random.choice(animals),
         "weight_kg": round(random.uniform(5, 5000), 1),
         "age": random.randint(1, 30),
-        "enclosure": random.choice(["A", "B", "C"]),
+        "zone": random.choice(["A", "B", "C"]),
     }
 
 OUTPUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "/data"
